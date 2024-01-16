@@ -1,6 +1,7 @@
 import Timer from './components/useEffectTimer'
 import './App.scss'
 import Counter from './components/useStateCounter'
+import Greeting from './components/useStateGreeting'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       </h1 >
       <Timer />
       <Counter />
+      <Greeting />
     </>
   )
 }
