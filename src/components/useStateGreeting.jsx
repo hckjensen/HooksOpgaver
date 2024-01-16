@@ -12,14 +12,14 @@ const Greeting = () => {
 
     //Ændrer 'greeting' til det der står i inputfeltet
     const changeGreeting = (e) => {
-        setGreeting(e.target.value);
+        setGreeting(e.target.value); 
     };
 
     //Sætter 'displayGreeting' til at være 'greeting' + 'name'
     const handleSubmit = (e) => {
-        e.preventDefault();
-        setDisplayGreeting(`${greeting || 'Hello'} ${name}`);
-        setName('');
+        e.preventDefault(); // forhindrer at siden refresher
+        setDisplayGreeting(`${greeting || 'Hello'} ${name}`); // hvis greeting er tom, så skriv 'Hello'
+        setName(''); // resetter inputfeltet
     };
 
     return (
@@ -35,11 +35,11 @@ const Greeting = () => {
                 color: 'black',
                 fontSize: '2rem'
             }}>Greeting</h1>
-            <form onSubmit={e => e.preventDefault()}>
-                <label htmlFor="">Hilsen</label>
-                <input type="text" value={greeting} onChange={changeGreeting} />
+            <form onSubmit={e => e.preventDefault()}> 
+                <label htmlFor="">Hilsen</label> 
+                <input type="text" value={greeting} onChange={changeGreeting} /> 
             </form>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}> 
                 <label htmlFor="">Navn</label>
                 <input type="text" value={name} onChange={handleChange} />
                 <button type="submit">Submit</button>
