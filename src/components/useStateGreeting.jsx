@@ -1,18 +1,21 @@
 import { useState } from "react";
 
 const Greeting = () => {
-    const [name, setName] = useState('');
-    const [greeting, setGreeting] = useState('');
-    const [displayGreeting, setDisplayGreeting] = useState('');
+    const [name, setName] = useState(''); // initial state
+    const [greeting, setGreeting] = useState(''); // initial state
+    const [displayGreeting, setDisplayGreeting] = useState(''); // initial state
 
+    //Ændrer 'name' til det der står i inputfeltet
     const handleChange = (e) => {
         setName(e.target.value);
     };
 
+    //Ændrer 'greeting' til det der står i inputfeltet
     const changeGreeting = (e) => {
         setGreeting(e.target.value);
     };
 
+    //Sætter 'displayGreeting' til at være 'greeting' + 'name'
     const handleSubmit = (e) => {
         e.preventDefault();
         setDisplayGreeting(`${greeting || 'Hello'} ${name}`);
