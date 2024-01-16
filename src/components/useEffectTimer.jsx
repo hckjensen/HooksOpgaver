@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 
 
 
-const Counter = () => {
+const Timer = () => {
 
     useEffect(() => {
         document.title = 'React Hooks';
@@ -91,4 +91,4 @@ const Counter = () => {
 }
 
 
-export default Counter;
+export default Timer;

@@ -1,5 +1,6 @@
-import Counter from './components/useEffectTimer'
+import Timer from './components/useEffectTimer'
 import './App.scss'
+import Counter from './components/useStateCounter'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
       }}>
         React Hooks
       </h1 >
+      <Timer />
       <Counter />
     </>
   )
